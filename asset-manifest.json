@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/valentines_day_gabi/static/css/main.5227fb33.css",
+    "main.js": "/valentines_day_gabi/static/js/main.cf8f7114.js",
+    "static/js/453.f147c510.chunk.js": "/valentines_day_gabi/static/js/453.f147c510.chunk.js",
+    "index.html": "/valentines_day_gabi/index.html",
+    "main.5227fb33.css.map": "/valentines_day_gabi/static/css/main.5227fb33.css.map",
+    "main.cf8f7114.js.map": "/valentines_day_gabi/static/js/main.cf8f7114.js.map",
+    "453.f147c510.chunk.js.map": "/valentines_day_gabi/static/js/453.f147c510.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5227fb33.css",
+    "static/js/main.cf8f7114.js"
+  ]
+}
