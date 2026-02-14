@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/valentines_day_gabi/static/css/main.d37d3a65.css",
+    "main.css": "/valentines_day_gabi/static/css/main.27933c2a.css",
     "main.js": "/valentines_day_gabi/static/js/main.fc682f04.js",
     "static/js/453.f147c510.chunk.js": "/valentines_day_gabi/static/js/453.f147c510.chunk.js",
     "static/media/otter-huggin-4.png": "/valentines_day_gabi/static/media/otter-huggin-4.88787212557dfa35f36d.png",
     "static/media/corgi-sticker.gif": "/valentines_day_gabi/static/media/corgi-sticker.e3da81d07a49600a89b2.gif",
     "index.html": "/valentines_day_gabi/index.html",
-    "main.d37d3a65.css.map": "/valentines_day_gabi/static/css/main.d37d3a65.css.map",
+    "main.27933c2a.css.map": "/valentines_day_gabi/static/css/main.27933c2a.css.map",
     "main.fc682f04.js.map": "/valentines_day_gabi/static/js/main.fc682f04.js.map",
     "453.f147c510.chunk.js.map": "/valentines_day_gabi/static/js/453.f147c510.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d37d3a65.css",
+    "static/css/main.27933c2a.css",
     "static/js/main.fc682f04.js"
   ]
 }
