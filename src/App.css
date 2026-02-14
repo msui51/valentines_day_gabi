@@ -1,12 +1,17 @@
 .home{
   position: relative;
-  height: 100vh;
   width: 100%;
-  overflow-y: hidden;
-background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
-display: flex;
-justify-content: center;
-align-items: center;
+  /* use newer viewport units on modern iOS and provide fallback */
+  min-height: 100dvh;
+  min-height: 100svh;
+  box-sizing: border-box;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -17,6 +22,7 @@ align-items: center;
   font-size: 32px;
   left: 5%;
   animation: fall 5s linear infinite;
+  z-index: 99;
 }
 
 .emoji:nth-child(2){
@@ -36,6 +42,7 @@ align-items: center;
   left: 10%;
   animation: fall 5s linear infinite;
   animation-delay: 1.6s;
+  z-index: 99;
 }
 
 .emoji:nth-child(4){
@@ -44,6 +51,7 @@ align-items: center;
   font-size: 32px;
   left: 80%;
   animation: fall 5s linear infinite;
+  z-index: 99;
 }
 
 .emoji:nth-child(5){
@@ -53,6 +61,7 @@ align-items: center;
   left: 20%;
   animation: fall 5s linear infinite;
   animation-delay: 1.2s;
+  z-index: 99;
 }
 
 .emoji:nth-child(6){
@@ -62,6 +71,7 @@ align-items: center;
   left: 90%;
   animation: fall 5s linear infinite;
   animation-delay: 1.7s;
+  z-index: 99;
 }
 
 .emoji:nth-child(7){
@@ -90,6 +100,7 @@ align-items: center;
   left: 15%;
   animation: fall 5s linear infinite;
   animation-delay: 2.8s;
+  z-index: 99;
 }
 
 .emoji:nth-child(10){
@@ -157,16 +168,21 @@ align-items: center;
 
 
 .wrapper{
-  width: 850px;
-  height: 550px;
+  width: min(850px, 95%);
+  max-width: 850px;
+  height: auto;
+  max-height: calc(100svh - 40px);
   border: 1px solid lightgrey;
-  position:absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.546);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: auto;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 .container{
@@ -263,7 +279,8 @@ h2{
 .otter__img{
   max-width: 400px;
   width: 100%;
-  height: 575px;
+  height: auto;
+  max-height: 60vh;
   border-radius: 20px;
   display: block;
   opacity: 0;
@@ -338,4 +355,61 @@ a span:nth-child(4) {
   transform: rotateX(90deg) translateZ(25px);
 }
 
+@media screen and (max-width: 430px){
+  /* ensure app fits on common iPhone widths including iPhone 15 */
+  html, body, #root{
+    height: 100svh;
+    overflow: auto;
+  }
+  .home{
+    overflow: auto;
+  }
+  .wrapper{
+    width: 92%;
+    max-height: calc(100svh - 30px);
+  }
+  .container{
+    padding: 30px 20px;
+  }
+  .content__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .giphy__img{
+    height: auto;
+    width: 220px;
+  }
+  .buttons__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    justify-content: center;
+  }
+  .button__no{
+    width: 100%;
+    color: #000;
+  }
+  a:hover {
+    transform: perspective(1000px) rotateX(360deg) scale(1.05);
+  }
+  .img-text__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .text{
+    margin-bottom: 18px;
+    font-size: 36px;
+  }
+  .otter__img{
+    height: auto;
+    max-height: 50vh;
+  }
+}
+  
 

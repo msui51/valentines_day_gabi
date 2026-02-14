@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import corgi from './assets/corgi-sticker.gif';
+import otter from './assets/otter-huggin-4.png';
 import './App.css';
 
 function App() {
@@ -23,7 +25,7 @@ function App() {
                   <h2 className='subtitle'>Will you be my <span className='emphasis'>Valentine</span>?</h2>
                 </div>
                 <div className='img__wrapper--giphy'>
-                  <img className='giphy__img' src='/corgi-sticker.gif' alt='corgi sticker'></img>
+                  <img className='giphy__img' src={corgi} alt='corgi sticker'></img>
                 </div>
                 <div className='buttons__wrapper'>
                   {/* <button className='button' onClick={handleResponse}>Yes</button>
@@ -58,7 +60,7 @@ function App() {
                 <div className='img-text__wrapper'>
                   <h2 className={`text ${otterVisible ? 'visible' : ''}`}>You make me otterly happy!</h2>
                   <div className='img__wrapper'>
-                    <img className={`otter__img ${otterVisible ? 'visible' : ''}`} src='/otter-huggin-4.png' alt='otter hugging'></img>
+                    <img className={`otter__img ${otterVisible ? 'visible' : ''}`} src={otter} alt='otter hugging'></img>
                   </div>
                 </div>
               </>
